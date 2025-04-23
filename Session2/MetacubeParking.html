@@ -1,0 +1,148 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Metacube Parking System</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!-- nav bar -->
+        <nav>
+            <ul> 
+                <li><a href="#employee-section" >Add Employee</a></li>
+                <li><a href="#vehicle-section">Add Vehicle</a></li>
+                <li><a href="#feedback-section">Give Feedback</a></li>
+                <li><a href="#pricing-section">Pricing</a></li>
+            </ul>
+        </nav>
+
+        <!-- cover image -->
+        <header>
+            <img src="image.jpg" alt="Metacube Parking System" id="image">
+        </header>
+
+        <!-- Add employee section -->
+        <section id="employee-section">
+            <h2>Add Employee</h2>
+            <form>
+                <label class="inputLabel" >Full Name:</label>
+                <input type="text" required>
+                <br/>
+                <label>Gender:</label>
+                <select required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <br/>
+                
+                <label >Email Id:</label>
+                <input type="email" required>
+                <br/>
+                
+                <label >Password:</label>
+                <input type="password" required>
+                <br/>
+                
+                <label>Confirm Password:</label>
+                <input type="password" required>
+                <br/>
+                
+                <label>Contact Number:</label>
+                <input type="tel" required>
+                <br/>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        
+        <!-- add vehicle section -->
+        <section id="vehicle-section">
+            <h2>Add Vehicle</h2>
+            <form>
+                <label>Vehicle Make (Company):</label>
+                <input type="text" required>
+                <br/>
+                
+                <label>Vehicle Model:</label>
+                <input type="text" required>
+                <br/>
+                
+                <label>Type:</label>
+                <input type="text" required>
+                <br/>
+                
+                <label >Vehicle Number:</label>
+                <input type="text" required>
+                <br/>
+                
+                <label >Employee ID:</label>
+                <input type="text" required>
+                <br/>
+                
+                <label>Identification:</label>
+                <textarea required></textarea>
+                <br/>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        
+        <!-- feedback section -->
+        <section id="feedback-section">
+            <h2>Feedback</h2>
+            <form>
+                <label >Your Name:</label>
+                <input type="text" required>
+                <br/>
+                
+                <label >Feedback:</label>
+                <textarea required></textarea>
+                <br/>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        
+        <!-- pricing section -->
+        <section id="pricing-section">
+            <h2>Pricing</h2>
+            <div id="price-grid">
+                <div class="price-grid-item">
+                    <h3>Cycle</h3>
+                    <div id="price-circle">
+                        <h1>$100</h1>
+                        <h2>/month</h2>
+                    </div>
+                    <p>Daily Price: ₹5</p>
+                    <p>Monthly Price: ₹100</p>
+                    <p>Yearly Price: ₹500</p>
+                    <button class="purchase-button">Purchase Now</button>
+                </div>
+                <div class="price-grid-item">
+                    <h3>MotorCycle</h3>
+                    <div id="price-circle">
+                        <h1>$200</h1>
+                        <h2>/month</h2>
+                    </div>
+                    <p>Daily Price: ₹10</p>
+                    <p>Monthly Price: ₹200</p>
+                    <p>Yearly Price: ₹1000</p>
+                    <button class="purchase-button">Purchase Now</button>
+                </div>
+                <div class="price-grid-item">
+                    <h3>Four Wheelers</h3>
+                    <div id="price-circle">
+                        <h1>$500</h1>
+                        <h2>/month</h2>
+                    </div>
+                    <p>Daily Price: ₹20</p>
+                    <p>Monthly Price: ₹500</p>
+                    <p>Yearly Price: ₹3500</p>
+                    <button class="purchase-button">Purchase Now</button>
+                </div>
+            </div>
+        </section>
+    </body>
+    </html>
