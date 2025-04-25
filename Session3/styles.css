@@ -97,10 +97,13 @@ header{
 
 .last-section{
     background: url('./images/downloadbg.png');
+    padding-top: 60px;
 }
 
 .footer{
-    background-color: rgba(27, 40, 88, 0.652);
+    background-color: rgba(8, 19, 59, 0.89); 
+    padding-top: 20px;
+    padding-bottom: 30px;
 }
 
 footer ul li{
@@ -154,4 +157,33 @@ footer ul li{
 
 .mt-100{
     margin-top: 100px;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.review-text-primary{
+    font-size: 20px;
+}
+
+.review-text-secondary{
+    font-size: 8px;
+    margin-top: 5px;
+}
+
+.apos{
+    font-size: 30px;
+    color: blue;
+}
+.pb-40{
+    padding-bottom: 40px;
+}
+
+.last-text{
+    font-size: 30px;
+}
+
+.text-gray{
+    color: gray;
 }
