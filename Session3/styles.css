@@ -1,0 +1,157 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+nav ul li{
+    display: inline;
+    margin: 15px;
+}
+
+.text-white{
+    color: white
+}
+
+.center-text-primary{
+    color: rgb(21, 44, 177); 
+    font-size: 25px;
+    
+}
+
+.center-text-secondary{
+    color: grey;
+    padding-top: 8px;
+    font-size: 12px;
+}
+
+.text-bold{
+    font-weight: bold;
+}
+
+header{
+    background: url('images/homebg.png') no-repeat center center/cover;
+    height: 100vh; 
+}
+
+.header-main{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.image1{
+    height: 400px;
+    margin: 40px;
+    padding-right: 50px;
+}
+
+.header-text{
+    padding-top: 30px;
+    padding-left: 50px;
+    font-size: 40px;
+}
+
+.red-button{
+    background-color: rgba(255, 68, 0, 0.808);
+}
+
+.blue-button{
+    background-color:rgba(1, 107, 168, 0.918) ;
+}
+
+.header-button{
+    color: white;
+    padding: 8px 12px;
+    font-size: 7px;
+    border: none;
+}
+
+.header-button-column{
+    padding: 25px 0px 0px 50px 
+}
+
+.text-center{
+    text-align: center;
+}
+
+.mid-section{
+    background: url('images/bodybg.png');
+    text-align: center;
+}
+
+.flex{
+    display: flex; 
+    justify-content: space-around;
+}
+
+.flex-center{
+    display: flex; 
+    justify-content: center;
+}
+
+.last-section{
+    background: url('./images/downloadbg.png');
+}
+
+.footer{
+    background-color: rgba(27, 40, 88, 0.652);
+}
+
+footer ul li{
+    display: inline;
+    margin: 15px;
+}
+
+.mt-40{
+    margin-top: 40px;
+}
+.mt-60{
+    margin-top: 60px;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.icon-text-primary{
+    font-size: 20px;
+}
+.icon-text-secondary{
+    padding-top: 10px;
+    font-size: 12px;
+    color: gray;
+}
+
+.text1-img{
+    padding-top: 60px;
+    height: 400px;
+}
+
+.ml-50{
+    margin-left: 50px;
+}
+.mr-50{
+    margin-right: 50px;
+}
+
+.mt-20{
+    margin-top: 20px;
+}
+
+.flow-text-primary{
+    font-size: 30px;
+}
+
+.flow-text-secondary{
+    color: grey;
+}
+
+.mt-100{
+    margin-top: 100px;
+}
