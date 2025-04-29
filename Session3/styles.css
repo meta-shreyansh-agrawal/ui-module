@@ -188,3 +188,21 @@ footer ul li{
 .text-gray{
     color: gray;
 }
+
+.navIcontab{
+    display: flex;
+    gap: 20px;
+}
+
+.navIcontab img{
+    height: 22px;
+}
+
+.feature-icon{
+    height: 50px;
+    width: 50px;
+}
+
+.feature-icon img{
+    width: 50px;
+}
