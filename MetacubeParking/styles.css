@@ -1,136 +1,172 @@
-/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+.container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 400px;
+    max-width: 90%;
 }
 
-nav {
-    background-color: antiquewhite;
+.form-section {
+    margin-bottom: 20px;
+}
+
+
+
+h1 {
     text-align: center;
-    padding: 10px 0; 
+    color: #2c3e50;
+    margin-bottom: 30px;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+h2 {
+    color: #3498db;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+.form-group {
+    margin-bottom: 15px;
 }
 
-nav ul li{
-    display: inline;
-    margin: 15px;
-}
-
-nav ul li a{
-    color: black;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px;
-}
-
-nav ul li a:hover {
-    background-color: aliceblue;
-    border-radius: 5px;
-}
-
-header{
-    margin-top: 15px;
-    text-align: center;
-}
-
-header img{
-    width: 80%;
-    height: auto;
-    border-radius: 10px;
-}
-
-section {
-    width: 80%;
-    margin: 40px auto;
-    padding: 20px; 
-    background: white;
-    border-radius: 10px;
-}
-
-h2{
-    text-align: center;
-}
 
 label {
-    font-weight: bold;
     display: block;
-    margin: 10px 0 5px;
+    margin-bottom: 5px;
+    font-weight: 500;
 }
-
-input,select,textarea{
+input[type="text"],input[type="email"],input[type="password"],input[type="tel"],select,textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
 }
-
+textarea {
+    height: 100px;
+    resize: vertical;
+}
 button {
-    background-color: #007bff;
+    background-color: #3498db;
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 12px 20px;
+    border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s;
 }
-
 button:hover {
-    background-color: #0056b3;
+    background-color: #2980b9;
 }
 
-#price-grid{
+
+.hidden {
+    display: none;
+}
+.radio-group {
     display: flex;
-    justify-content: space-around;
+    gap: 20px;
+    margin-top: 10px;
+}
+.radio-option {
+    display: flex;
     align-items: center;
 }
 
-#price-grid .price-grid-item{
-    border: 2px solid #0056b3;
-    border-radius: 20px;
-    padding: 10px 30px;
-    width: 25%;
-}
 
-h3{
-    text-align: center;
-    text-transform: uppercase;
+.radio-option input {
+    margin-right: 5px;
 }
-
-p{
-    text-align: center;
-    color: gray;
-}
-
-#pricing-section > div > div{
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
     text-align: center;
 }
-
-.purchase-button{
-    background-color: white;
-    color: #0056b3;
-    border: 1px solid #0056b3;
+.error-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 5px;
 }
 
-#price-circle{
-    border: 2px solid #0056b3;
-    border-radius: 50%; 
-    height: 100px;
-    width: 100px;
-    margin: auto;
+
+.pass-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+.pass-option {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
 }
 
-#price-circle p{
-    margin: auto;
-    padding: 30% 0;
+
+.pass-option:hover {
+    border-color: #3498db;
+    background-color: #f8f9fa;
+}
+
+.pass-option.selected {
+    border-color: #3498db;
+    background-color: #ebf7ff;
+}
+
+.pass-type {
     font-weight: bold;
-    color: black;
-    font-size: 20px;
+    margin-bottom: 5px;
 }
 
+.pass-price {
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+
+.currency-selector {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+.currency-selector select {
+    width: auto;
+    padding: 5px;
+}
+
+
+.pass-summary {
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    padding: 15px;
+    margin-top: 20px;
+}
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.summary-total {
+    font-weight: bold;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    margin-top: 10px;
+}
