@@ -1,0 +1,52 @@
+// import { Task } from "../types/Task";
+
+// export const initialTasks: Task[] = [
+//   { id: 1,
+//     title: "Complete React Project",
+//     description: "Finish the frontend for task management",
+//     status: "New",
+//     priority: "High",
+//     createdAt: new Date().toISOString(),
+//     completedAt: null,
+//   },
+//   {
+//     title: "Complete React Project",
+//     description: "Finish the frontend for task management",
+//     status: "In Progress",
+//     priority: "Medium",
+//     createdAt: new Date().toISOString(),
+//     completedAt: null,
+//   },
+//   {
+//     title: "Complete React Project",
+//     description: "Finish the frontend for task management",
+//     status: "Completed",
+//     priority: "Low",
+//     createdAt: new Date().toISOString(),
+//     completedAt: null,
+//   },
+//   {
+//     title: "Complete React Project",
+//     description: "Finish the frontend for task management",
+//     status: "New",
+//     priority: "High",
+//     createdAt: new Date().toISOString(),
+//     completedAt: null,
+//   },
+//   {
+//     title: "Complete React Project",
+//     description: "Finish the frontend for task management",
+//     status: "New",
+//     priority: "High",
+//     createdAt: new Date().toISOString(),
+//     completedAt: null,
+//   },
+//   {
+//     title: "Complete React Project",
+//     description: "Finish the frontend for task management",
+//     status: "New",
+//     priority: "High",
+//     createdAt: new Date().toISOString(),
+//     completedAt: null,
+//   },
+// ];
