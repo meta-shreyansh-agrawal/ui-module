@@ -2,13 +2,25 @@
 
 import Image from "next/image";
 import TaskBoard from "./components/TaskBoard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Task } from "./types/Task";
 import TaskModal from "./components/TaskModal";
 
 
 export default function Home() {
     const [tasks, setTasks] = useState<Task[]>([]);
+
+     useEffect(() => {
+    const storedTasks = localStorage.getItem("tasks");
+    if (storedTasks) {
+      setTasks(JSON.parse(storedTasks));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
+
 
     const [isModalOpen, setModalOpen] = useState(false);
     const [selectedTask, setSelectedTask] = useState<Task | null>(null);
