@@ -67,6 +67,15 @@ const TaskModal: React.FC<TaskModalProps> = ({ isOpen, onClose, onSave, task }) 
             <option value="Medium">Medium</option>
             <option value="Low">Low</option>
           </select>
+          {task && <select
+            className="w-full p-2 border rounded mb-2"
+            value={taskData.status}
+            onChange={(e) => setTaskData({ ...taskData, status: e.target.value as Task["status"] })}
+          >
+            <option value="New">New</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+          </select>}
           <button type="submit" className="w-full bg-blue-500 text-white px-4 py-2 rounded">
             {task ? "Save Changes" : "Create Task"}
           </button>
