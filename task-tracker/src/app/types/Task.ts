@@ -8,5 +8,5 @@ export interface Task {
   status: TaskStatus;
   priority: TaskPriority;
   createdAt: string;
-  completedAt?: string | null;
+  completedAt: string | null;
 }

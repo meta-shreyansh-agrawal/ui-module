@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Task } from "../types/Task";
 
@@ -29,18 +30,22 @@ const TaskModal: React.FC<TaskModalProps> = ({ isOpen, onClose, onSave, task }) 
     e.preventDefault();
     onSave(taskData);
     setTaskData({
-    id: 0,
-    title: "",
-    description: "",
-    status: "New",
-    priority: "Medium",
-    createdAt: new Date().toISOString(),
-    completedAt: null,
-  })
+      id: 0,
+      title: "",
+      description: "",
+      status: "New",
+      priority: "Medium",
+      createdAt: new Date().toISOString(),
+      completedAt: null,
+    });
+  };
+
+  const toInputDateTime = (isoString: string | null) => {
+    return isoString ? new Date(isoString).toISOString().slice(0, 16) : "";
   };
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-white bg-opacity-50 backdrop-blur-md">
+    <div className="fixed inset-0 flex items-center justify-center bg-transparent backdrop-blur-sm">
       <div className="bg-white p-6 rounded shadow-lg w-1/3">
         <h2 className="text-2xl font-bold mb-4">{task ? "Edit Task" : "Create Task"}</h2>
         <form onSubmit={handleSubmit}>
@@ -67,15 +72,36 @@ const TaskModal: React.FC<TaskModalProps> = ({ isOpen, onClose, onSave, task }) 
             <option value="Medium">Medium</option>
             <option value="Low">Low</option>
           </select>
-          {task && <select
+          {task && (
+            <select
+              className="w-full p-2 border rounded mb-2"
+              value={taskData.status}
+              onChange={(e) => setTaskData({ ...taskData, status: e.target.value as Task["status"] })}
+            >
+              <option value="New">New</option>
+              <option value="In Progress">In Progress</option>
+              <option value="Completed">Completed</option>
+            </select>
+          )}
+          <label className="block mb-1 font-medium">Created At</label>
+          <input
+            type="datetime-local"
             className="w-full p-2 border rounded mb-2"
-            value={taskData.status}
-            onChange={(e) => setTaskData({ ...taskData, status: e.target.value as Task["status"] })}
-          >
-            <option value="New">New</option>
-            <option value="In Progress">In Progress</option>
-            <option value="Completed">Completed</option>
-          </select>}
+            value={toInputDateTime(taskData.createdAt)}
+            onChange={(e) => setTaskData({ ...taskData, createdAt: new Date(e.target.value).toISOString() })}
+          />
+          <label className="block mb-1 font-medium">Completed At</label>
+          <input
+            type="datetime-local"
+            className="w-full p-2 border rounded mb-2"
+            value={toInputDateTime(taskData.completedAt)}
+            onChange={(e) =>
+              setTaskData({
+                ...taskData,
+                completedAt: e.target.value ? new Date(e.target.value).toISOString() : null,
+              })
+            }
+          />
           <button type="submit" className="w-full bg-blue-500 text-white px-4 py-2 rounded">
             {task ? "Save Changes" : "Create Task"}
           </button>
