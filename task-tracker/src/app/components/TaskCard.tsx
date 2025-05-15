@@ -24,20 +24,20 @@ const TaskCard: React.FC<TaskCardProps> = ({ task, onEditTask, onDeleteTask }) =
       <div {...attributes} {...listeners}>
       <h3 className="text-lg font-semibold">{task.title}</h3>
       <p>{task.description}</p>
-      <p className="text-sm">{task.status}</p>
+      {/* <p className="text-sm">{task.status}</p> */}
       </div>
       { task.status!="Completed" &&<div className="flex items-center space-x-2">
+  <div id="temp" {...attributes} {...listeners} className="flex-1  h-full">{task.status}</div>
   <button onClick={() => onEditTask(task)} className="text-white hover:text-gray-300">
     <FaEdit size={20} />
   </button>
   <button onClick={() => onDeleteTask(task.id)} className="text-white hover:text-gray-300">
     <FaTrash size={20} />
   </button>
-  <div {...attributes} {...listeners} className="flex-1 bg-gray-200 h-full"></div> {/* Expands to fill remaining space */}
 </div>
 }
+{task.status=="Completed" && <div id="temp" {...attributes} {...listeners} className="flex-1  h-full">{task.status}</div>}
     </div>
-    
   );
 };
 
