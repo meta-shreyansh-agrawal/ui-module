@@ -40,8 +40,8 @@ const TaskModal: React.FC<TaskModalProps> = ({ isOpen, onClose, onSave, task }) 
     });
   };
 
-  const toInputDateTime = (isoString: string | null) => {
-    return isoString ? new Date(isoString).toISOString().slice(0, 16) : "";
+  const toInputDate = (isoString: string | null) => {
+    return isoString ? new Date(isoString).toISOString().slice(0, 10) : "";
   };
 
   return (
@@ -85,16 +85,16 @@ const TaskModal: React.FC<TaskModalProps> = ({ isOpen, onClose, onSave, task }) 
           )}
           <label className="block mb-1 font-medium">Created At</label>
           <input
-            type="datetime-local"
+            type="date"
             className="w-full p-2 border rounded mb-2"
-            value={toInputDateTime(taskData.createdAt)}
+            value={toInputDate (taskData.createdAt)}
             onChange={(e) => setTaskData({ ...taskData, createdAt: new Date(e.target.value).toISOString() })}
           />
           <label className="block mb-1 font-medium">Completed At</label>
           <input
-            type="datetime-local"
+            type="date"
             className="w-full p-2 border rounded mb-2"
-            value={toInputDateTime(taskData.completedAt)}
+            value={toInputDate (taskData.completedAt)}
             onChange={(e) =>
               setTaskData({
                 ...taskData,

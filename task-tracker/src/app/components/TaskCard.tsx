@@ -14,7 +14,6 @@ export function formatReadableDate(isoString: string | null): string {
   const date = new Date(isoString);
   return new Intl.DateTimeFormat("en-IN", {
     dateStyle: "medium",
-    timeStyle: "short",
   }).format(date);
 }
 
@@ -36,7 +35,7 @@ const TaskCard: React.FC<TaskCardProps> = ({ task, onEditTask, onDeleteTask }) =
       {/* <p className="text-sm">{task.status}</p> */}
       </div>
 <p>Created At: {formatReadableDate(task.createdAt)}</p>
-{ task.completedAt===null ? <p>Not Completed Yet</p> : <p>Completed At: {formatReadableDate(task.completedAt)}</p>}
+{ task.status==="Completed" && <p>Completed At: {formatReadableDate(task.completedAt)}</p>}
       { task.status!="Completed" &&<div className="flex items-center space-x-2">
   <div id="temp" {...attributes} {...listeners} className="flex-1  h-full">{task.status}</div>
   <button onClick={() => onEditTask(task)} className="text-white hover:text-gray-300">
